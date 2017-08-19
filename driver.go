@@ -19,6 +19,14 @@ func newMFSDriver(mfsBase string) mfsDriver {
 }
 
 func (d mfsDriver) volumeInfo(name string) (string, int, error) {
+	// 如果是一个真实存在的路径那就直接返回路径
+	// 让docker自己去mount去
+	if strings.HasPrefix(name, "/") {
+		return name, 0, nil
+	}
+
+	// 如果是appname.appuid, 那就按照规则创建mfs的文件夹
+	// 并且chown成appuid
 	parts := strings.Split(name, ".")
 	if len(parts) != 2 {
 		return "", 0, fmt.Errorf("Volume name should be in format 'appname.appuid'")
