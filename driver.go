@@ -76,7 +76,7 @@ func (d mfsDriver) Mount(r *volume.MountRequest) (*volume.MountResponse, error) 
 			return &volume.MountResponse{}, err
 		}
 	} else if err != nil {
-		return &volume.MountResponse{Err: err.Error()}, err
+		return &volume.MountResponse{}, err
 	}
 
 	if fi != nil && !fi.IsDir() {
@@ -105,7 +105,6 @@ func (d mfsDriver) List() (*volume.ListResponse, error) {
 // 就默认的就行
 func (d mfsDriver) Capabilities() *volume.CapabilitiesResponse {
 	return &volume.CapabilitiesResponse{
-		Err:          "",
 		Capabilities: volume.Capability{Scope: "global"},
 	}
 }
