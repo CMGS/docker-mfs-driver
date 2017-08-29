@@ -3,6 +3,14 @@ MooseFS Volume Plugin
 
 使用 [MooseFS](https://moosefs.com/index.html) 作为存储后端的 docker volume 插件。
 
+#### 编译
+
+`make build`
+
+如果需要打包成 rpm 的话执行
+
+`make rpm`
+
 #### 运行
 
 使用这样的命令来运行插件:

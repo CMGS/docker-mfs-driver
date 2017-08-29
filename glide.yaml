@@ -1,4 +1,4 @@
-package: gitlab.ricebook.net/platform/docker-mfs-driver
+package: github.com/projecteru2/docker-mfs-driver
 import:
 - package: github.com/docker/go-plugins-helpers
   subpackages:

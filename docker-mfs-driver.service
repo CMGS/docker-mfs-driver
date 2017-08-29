@@ -1,0 +1,18 @@
+[Unit]
+Description=Docker mfs driver
+Wants=docker.service
+After=network.target
+
+[Service]
+Type=simple
+EnvironmentFile=-/etc/sysconfig/docker-mfs-driver
+ExecStart=/usr/bin/docker-mfs-driver
+Restart=on-failure
+LimitNOFILE=10485760
+LimitNPROC=10485760
+LimitCORE=infinity
+MountFlags=slave
+
+[Install]
+WantedBy=multi-user.target
+

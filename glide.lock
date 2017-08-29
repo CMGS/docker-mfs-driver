@@ -1,12 +1,12 @@
-hash: a12a2e97d3b298c2943806acece4ec5ba35ed027c6094e73b8e2b7655ffa667d
-updated: 2017-08-22T16:25:52.745974928+08:00
+hash: f1761fc563e2445990738f46a19c7583d3b95504c5474f480ef8de1e2faa2da4
+updated: 2017-08-29T15:35:16.527817762+08:00
 imports:
 - name: github.com/coreos/go-systemd
   version: d2196463941895ee908e13531a23a39feb9e1243
   subpackages:
   - activation
 - name: github.com/docker/go-connections
-  version: 990a1a1a70b0da4c4cb70e117971a4f0babfbf1a
+  version: b38325e445c4a123d7950817c92b13e8cc21f59a
   subpackages:
   - sockets
 - name: github.com/docker/go-plugins-helpers
